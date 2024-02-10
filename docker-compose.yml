@@ -1,0 +1,10 @@
+version: "0.0"
+services:
+  db:
+    build: ./db-init
+    ports:
+      - "${HOST_PORT}:5432"
+    env_file:
+      - .env
+    volumes:
+      - ./db-init/init.sql:/docker-entrypoint-initdb.d/init.sql
