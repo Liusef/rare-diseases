@@ -1,0 +1,119 @@
+{
+    "Aarskog Syndrome": {
+        "aka": [
+            "Aarskog disease",
+            "Aarskog-Scott syndrome",
+            "AAS",
+            "faciodigitogenital syndrome",
+            "faciogenital dysplasia",
+            "FGDY",
+            "Scott Aarskog syndrome"
+        ],
+        "uri": "https://rarediseases.org/rare-diseases/aarskog-syndrome/"
+    },
+    "Abetalipoproteinemia": {
+        "aka": [
+            "ABL",
+            "Bassen-Kornzweig syndrome",
+            "low density lipoprotein deficiency",
+            "microsomal triglyceride transfer protein deficiency",
+            "MTP deficiency",
+            "familial hypobetalipoproteinemia due to secretion defect 1 (FHBL-SD1)"
+        ],
+        "uri": "https://rarediseases.org/rare-diseases/abetalipoproteinemia/"
+    },
+    "Ablepharon-Macrostomia Syndrome": {
+        "aka": [
+            "AMS"
+        ],
+        "uri": "https://rarediseases.org/rare-diseases/ablepharon-macrostomia-syndrome/"
+    },
+    "Acanthocheilonemiasis": {
+        "aka": [
+            "Acanthocheilonemiasis perstans",
+            "Dipetalonema perstans",
+            "Dipetalonemiasis",
+            "Mansonella perstans"
+        ],
+        "uri": "https://rarediseases.org/rare-diseases/acanthocheilonemiasis/"
+    },
+    "Aceruloplasminemia": {
+        "aka": [
+            "familial apoceruloplasmin deficiency",
+            "hereditary ceruloplasmin deficiency"
+        ],
+        "uri": "https://rarediseases.org/rare-diseases/aceruloplasminemia/"
+    },
+    "Achalasia": {
+        "aka": [
+            "cardiospasm",
+            "dyssynergia esophagus",
+            "esophageal aperistalsis",
+            "megaesophagus"
+        ],
+        "uri": "https://rarediseases.org/rare-diseases/achalasia/"
+    },
+    "Achard Thiers Syndrome": {
+        "aka": [
+            "Diabetic Bearded Woman Syndrome"
+        ],
+        "uri": "https://rarediseases.org/rare-diseases/achard-thiers-syndrome/"
+    },
+    "Achondrogenesis": {
+        "aka": [],
+        "uri": "https://rarediseases.org/rare-diseases/achondrogenesis/"
+    },
+    "Achondroplasia": {
+        "aka": [
+            "ACH",
+            "achondroplastic dwarfism",
+            "dwarf, achondroplastic"
+        ],
+        "uri": "https://rarediseases.org/rare-diseases/achondroplasia/"
+    },
+    "Acid Sphingomyelinase Deficiency": {
+        "aka": [
+            "ASMD",
+            "ASM Deficiency",
+            "Acid Sphingomyelinase-deficient Niemann-Pick Disease",
+            "ASM-deficient Niemann-Pick Disease"
+        ],
+        "uri": "https://rarediseases.org/rare-diseases/acid-sphingomyelinase-deficiency/"
+    },
+    "Acidemia, Methylmalonic": {
+        "aka": [
+            "Methylmalonic Aciduria"
+        ],
+        "uri": "https://rarediseases.org/rare-diseases/acidemia-methylmalonic/"
+    },
+    "Acoustic Neuroma": {
+        "aka": [
+            "acoustic neurilemoma",
+            "acoustic neurinoma",
+            "fibroblastoma, perineural",
+            "neurinoma of the acoustic nerve",
+            "neurofibroma of the acoustic nerve",
+            "schwannoma of the acoustic nerve",
+            "vestibular schwannoma"
+        ],
+        "uri": "https://rarediseases.org/rare-diseases/acoustic-neuroma/"
+    },
+    "Acquired Aplastic Anemia": {
+        "aka": [
+            "idiopathic aplastic anemia",
+            "immune aplastic anemia"
+        ],
+        "uri": "https://rarediseases.org/rare-diseases/acquired-aplastic-anemia/"
+    },
+    "Acquired Hemophilia": {
+        "aka": [
+            "acquired hemophilia A (AHA)",
+            "acquired hemophilia B (AHB)"
+        ],
+        "uri": "https://rarediseases.org/rare-diseases/acquired-hemophilia/"
+    },
+    "Acquired Lipodystrophy": {
+        "aka": [],
+        "uri": "https://rarediseases.org/rare-diseases/acquired-lipodystrophy/"
+    }
+}
