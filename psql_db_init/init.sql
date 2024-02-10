@@ -2,6 +2,7 @@ create extension if not exists vector;
 
 create table if not exists keyword (
     id serial primary key,
+    count int not null,
     name varchar unique not null
 );
 
