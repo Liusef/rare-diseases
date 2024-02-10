@@ -2,7 +2,7 @@ create extension if not exists vector;
 
 create table if not exists keyword (
     id serial primary key,
-    name varchar unique not null,
+    name varchar unique not null
 );
 
 create index idx_keyword_name on keyword (name);
@@ -25,6 +25,6 @@ create table if not exists disease_keyword (
 
 create table if not exists disease_embeddings (
     id serial primary key,
-    disease_id int int references disease(id) on delete cascade,
-    embedding vector(768) not null,
+    disease_id integer references disease(id) on delete cascade,
+    embedding vector(768) not null
 );
