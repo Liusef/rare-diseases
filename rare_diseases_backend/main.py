@@ -3,11 +3,14 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from dotenv import load_dotenv
 import colors as co
+import mongo
 import os
+import json  # we can get rid of this after testing I think
 app = Flask(__name__)
 
-load_dotenv()
+load_dotenv(override=True)
 
+print(f"{co.BLUE}Got MongoDB URI:{co.RESET} {os.getenv("ATLAS_URI")}")
 client = MongoClient(os.getenv("ATLAS_URI"), server_api=ServerApi('1'))
 
 def mongo_connect_test(log: bool = True) -> bool:
@@ -29,3 +32,12 @@ def hello():
 if __name__ == "__main__":
     mongo_connect_test()
     app.run()
+
+    # with open("ex.json") as f:
+    #     js = json.load(f)
+    #     # mongo.insert_vec(client, js["values"][0], "Example")
+    #     ret = mongo.query_vec(client, js["values"][0], 10)
+    #     for val in ret:
+    #         print(val)
+    
+    
