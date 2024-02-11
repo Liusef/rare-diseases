@@ -29,3 +29,5 @@ create table if not exists disease_embeddings (
     disease_id integer references disease(id) on delete cascade,
     embedding vector(768) not null
 );
+
+CREATE INDEX ON disease_embeddings USING hnsw (embedding vector_cosine_ops);
