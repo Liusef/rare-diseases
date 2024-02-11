@@ -11,12 +11,6 @@ const RSStyle = styled.div`
 const HomeView = ({ ctx }) => {
     const {page, setPage, results, setResults, selected, setSelected} = useContext(StateContext)
 
-    useEffect(() => {
-        fetch('/api/get_keywords?q=adhd')
-        .then((resp) => console.log(resp))
-        .catch((err) => console.log(err))
-        .finally(() => console.log('loaded'));
-    }, [])
     return (
         <div className="h-100 d-flex flex-row align-items-center">
 

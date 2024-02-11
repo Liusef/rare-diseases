@@ -20,7 +20,7 @@ def disease_row_to_object(disease_row):
     obj = {
         'name': name,
         'url': url,
-        'affected_text': affected_text[:50],
-        'symptom_text': symptom_text[:50]
+        'affected_text': affected_text,
+        'symptom_text': symptom_text
     }
     return obj

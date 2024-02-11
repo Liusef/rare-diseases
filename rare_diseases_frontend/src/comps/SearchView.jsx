@@ -11,7 +11,7 @@ const getTags = (input_str) => {
 const BottomRight = ({children}) => {
     
     return (
-        <div style={{position: "relative", height: "100%"}}>
+        <div style={{position: "relative", height: "4rem", marginTop:"auto"}}>
             <div style={{position: "absolute", bottom: "0", right: "0", padding: "10px"}}>
                 {children}
             </div>
@@ -25,16 +25,16 @@ const ThemedInput = styled.textarea`
     background: transparent;
     color: black;
     font-weight: 500;
-    /* height: 5rem; */
+    /* height: 10rem; */
 `
 
 const SearchView = () => {
     const {page, setPage, results, setResults, selected, setSelected} = useContext(StateContext)
     const [inputState, setInputState] = useState({input: '', typing: false, timeout: 0})
-    const [tagList, setTagList] = useState([])
-    const [canContinue, setCanContinue] = useState(false)
-    
-    const timeout_ms = 3000
+    const [tagList, setTagList] = useState([]);
+    const [canContinue, setCanContinue] = useState(false);
+
+    const timeout_ms = 300
     const min_query_len = 100
     
     const onInputChanged = (e) => {
@@ -46,14 +46,16 @@ const SearchView = () => {
             input: e.target.value,
             typing: false,
             timeout: setTimeout(() => {
-
-                fetch(`/api/get_possible_keywords?${(new URLSearchParams({q: e.target.value})).toString()}`)
-                .then((resp) => {
-                    console.log(`got reply from possible keywords \n${resp}`)
+                fetch(`/api/get_keywords?${(new URLSearchParams({q: e.target.value})).toString()}`)
+                .then((response) => response.json())
+                .then(({ results }) => {
+                    console.log(results)
+                    if(results) {
+                        setTagList(results);
+                    }
                 })
                 .catch((err) => {
-                    console.log(err)
-                    setTagList([])
+                    console.log(err);
                 })
                 .finally(
 
@@ -63,26 +65,29 @@ const SearchView = () => {
     }
 
     const sendRequest = (text) => {
-
-        
-
+        fetch(`/api/get_disease_results?q=${encodeURIComponent(text)}`)
+        .then((response) => response.json())
+        .then(({ results }) => setResults(results))
+        .catch((error) => console.log(error));
     }
 
     return (
         <div className="h-100">
-            <div className="text-center m-4" style={{height: "74%"}}>
+            <div className="text-center p-4 d-flex gap-3 flex-column justify-content-between" style={{height: "90%", }}>
                 <div>
                     Input must be at least {min_query_len} characters.
                 </div>
                 <ThemedInput onChange={onInputChanged}/>
+                <h4>Identified Symptoms</h4>
                 <div>
-                    {tagList}
+                    {tagList && tagList.map((data) => (<div key={data}>
+                        {data}
+                    </div>))}
                 </div>
                 <BottomRight>
                     <Button text="Continue" onClick={() => {
-                        const ret = sendRequest(inputState.input)
-                        // setResults(ret)
-                        setPage(2)
+                        sendRequest(inputState.input);
+                        setPage(2);
                     }}/>
                 </BottomRight>
             </div>
