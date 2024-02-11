@@ -46,8 +46,11 @@ const SearchView = () => {
             input: e.target.value,
             typing: false,
             timeout: setTimeout(() => {
-                fetch(`http://143.215.127.46:5000/get_possible_keywords?q=${e.target.value}`)
-                .then((resp) => setTagList(resp[results]))
+
+                fetch(`/api/get_possible_keywords?${(new URLSearchParams({q: e.target.value})).toString()}`)
+                .then((resp) => {
+                    console.log(`got reply from possible keywords \n${resp}`)
+                })
                 .catch((err) => {
                     console.log(err)
                     setTagList([])

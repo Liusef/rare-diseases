@@ -42,7 +42,7 @@ function App() {
                     <LeftDiv>
                         <ViewManager/>
                     </LeftDiv>
-                    <div className='col-7 vh-100 overflow-scroll' style={{background: "#225599"}}>
+                    <div className='col-7 vh-100' style={{background: "#E5FFCC"}}>
                         <DiseaseInfo/>
                     </div>
                 </div>
