@@ -9,7 +9,7 @@ const RSStyle = styled.div`
 `
 
 const HomeView = ({ ctx }) => {
-    const {page, setPage, state, setState} = useContext(StateContext)
+    const {page, setPage, results, setResults, selected, setSelected} = useContext(StateContext)
 
     useEffect(() => {
         fetch('http://143.215.127.46:5000')
@@ -30,12 +30,7 @@ const HomeView = ({ ctx }) => {
                     <div className="fs-3" style={{marginTop: 0, marginBottom: "1rem"}}>
                         Explore rare diseases.
                     </div>
-                    <Button text="Get Started" onClick={() => {
-                        let temp = state 
-                        temp.search_query = ""
-                        temp.tags = []
-                        setPage(1)
-                    }}/>
+                    <Button text="Get Started" onClick={() => setPage(1)}/>
                     <div style={{height: "100px"}}>
                         {/* Just to move the home stuff up a bit */}
                     </div>

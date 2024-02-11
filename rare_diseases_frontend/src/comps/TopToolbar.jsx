@@ -40,7 +40,7 @@ const BackButton = styled.img`
 `
 
 const TopToolbar = () => {
-    const {page, setPage, state, setState} = useContext(StateContext)  
+    const {page, setPage, results, setResults, selected, setSelected} = useContext(StateContext)
     const [title, setTitle] = useState("RareSight")
     const [showBack, setShowBack] = useState(false)
     
@@ -48,9 +48,7 @@ const TopToolbar = () => {
         if (page == 1) {
             setTitle("Enter Symptoms")
         } else if (page == 2) {
-            
-        } else if (page == 3) {
-
+            setTitle(`Found ${results.length} result${results.length != 1 ? "s" : ""}`)
         } else {
             setTitle("RareSight")
         }
@@ -66,7 +64,7 @@ const TopToolbar = () => {
             <LeftParent>
                 <LeftChild>
                     {
-                        state.show_back && <BackButton src={LeftArrow}/> 
+                        //state.show_back && <BackButton src={LeftArrow}/> 
                     }
                 </LeftChild>
             </LeftParent>
