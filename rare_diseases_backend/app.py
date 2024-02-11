@@ -6,6 +6,10 @@ from utils import vote_by_pareto, vote_by_pareto_pow, vote_by_pareto_sqrt, disea
 from scipy.special import softmax
 from run_embeddings import EmbedDiseaseSymptoms
 import numpy as np
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
 
 load_dotenv(override=True)
 
