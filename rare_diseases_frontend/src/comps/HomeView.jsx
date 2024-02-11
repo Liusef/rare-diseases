@@ -4,8 +4,14 @@ import {useContext, useEffect} from "react";
 import { StateContext } from "../App"
 
 const RSStyle = styled.div`
-    font-weight: bold;
-    font-size: 3rem;
+    font-weight: 800;
+    font-size: 4rem;
+    // color: #009846;
+    /* filter: drop-shadow(0 0 64px #02e29faa); */
+    background: var(--RareSight-Gradient, linear-gradient(94deg, #30615B 4.51%, #018B42 102.88%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 `
 
 const HomeView = ({ ctx }) => {
@@ -18,11 +24,13 @@ const HomeView = ({ ctx }) => {
                     <RSStyle>
                         RareSight
                     </RSStyle>
-                    <div className="fs-3">
-                        Enter symptoms.
-                    </div>
-                    <div className="fs-3" style={{marginTop: 0, marginBottom: "1rem"}}>
-                        Explore rare diseases.
+                    <div className="text-center fs-5 fw-bolder text-uppercase ">
+                        <div>
+                            Enter symptoms.
+                        </div>
+                        <div style={{marginTop: "-0.5rem", marginBottom: "1rem"}}>
+                            Explore rare diseases.
+                        </div>
                     </div>
                     <Button text="Get Started" onClick={() => setPage(1)}/>
                     <div style={{height: "100px"}}>

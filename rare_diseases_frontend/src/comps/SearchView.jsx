@@ -25,6 +25,7 @@ const ThemedInput = styled.textarea`
     background: transparent;
     color: black;
     font-weight: 500;
+    border-radius: 8px;
     /* height: 10rem; */
 `
 
@@ -75,12 +76,12 @@ const SearchView = () => {
         <div className="h-100">
             <div className="text-center p-4 d-flex gap-3 flex-column justify-content-between" style={{height: "90%", }}>
                 <div>
-                    Input must be at least {min_query_len} characters.
+                    Note: Longer inputs will yield better results.
                 </div>
                 <ThemedInput onChange={onInputChanged}/>
-                <h4>Identified Symptoms</h4>
-                <div>
-                    {tagList && tagList.map((data) => (<div key={data}>
+                <h4 className="fw-bold">Identified Symptoms</h4>
+                <div className="d-flex flex-row flex-wrap column-gap-2 row-gap-4">
+                    {tagList && tagList.map((data) => (<div key={data} className="ps-3 pe-3 pt-1 pd-3 fw-medium" style={{background: "#dddddd", borderRadius: "4px"}}>
                         {data}
                     </div>))}
                 </div>

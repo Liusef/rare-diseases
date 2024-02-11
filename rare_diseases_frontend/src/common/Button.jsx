@@ -11,9 +11,9 @@ const StyledButton = styled.button`
   gap: 10px;
   border-radius: 2px;
   border: 2px solid #000;
-  background: #FFF;
   box-shadow: 4px 4px 0px 0px black;
   color: black;
+  font-weight: 600;
 
   &:hover {
     transform: translate(4px, 4px);
@@ -28,9 +28,18 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = ({ text, onClick }) => {
+const Button = ({ text, onClick, color, textColor }) => {
+  
+  if (!color) {
+    color = "#FFFFFF"
+  }
+
+  if (!textColor) {
+    textColor = "000000"
+  }
+
   return (
-    <StyledButton onClick={onClick}>{text}</StyledButton>
+    <StyledButton onClick={onClick} style={{backgroundColor: color, color: textColor}}>{text}</StyledButton>
   );
 };
 

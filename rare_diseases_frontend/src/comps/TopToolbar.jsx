@@ -50,9 +50,9 @@ const TopToolbar = () => {
         } else if (page == 2) {
             setTitle(`Found ${results.length} result${results.length != 1 ? "s" : ""}`)
         } else {
-            setTitle("RareSight")
+            setTitle("Welcome to RareSight")
         }
-    },[page])
+    },[page, results])
 
     return (
         <Toolbar>
@@ -64,7 +64,7 @@ const TopToolbar = () => {
             <LeftParent>
                 <LeftChild>
                     {
-                        //state.show_back && <BackButton src={LeftArrow}/> 
+                        page > 0 && <BackButton src={LeftArrow} onClick={() => setPage(page - 1)} style={{cursor: "pointer"}}/> 
                     }
                 </LeftChild>
             </LeftParent>

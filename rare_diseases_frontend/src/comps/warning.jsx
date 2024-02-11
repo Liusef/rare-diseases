@@ -20,13 +20,14 @@ function Warning() {
       centered
     >
       <Modal.Header>
-        <Modal.Title id="contained-modal-title-vcenter">
+        <Modal.Title id="contained-modal-title-vcenter" className='fw-bold mt-2'>
           DISCLAIMER
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <p>
+        <p className='fw-medium p-2'>
           By continuing, you acknowledge that RareSight is NOT a replacement for diagnosis, nor should results be used in isolation.
+          <br/>
           <br/>
           RareSight is designed to be a preliminary exploration tool that uses your symptom list to identify potentially relevant rare diseases, and should be used as such.
         </p>

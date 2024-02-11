@@ -22,10 +22,11 @@ const ResultsView = () => {
 
     return (
         <div className="container">
-            <div className="d-flex flex-column gap-1 w-100">
-                yippeeee
+            <div className="d-flex flex-column gap-1 w-100 mt-4 mb-lg-4">
                 {row_elems}
-                yippeeee
+                <div style={{height: '96px'}}>
+
+                </div>
             </div>
         </div>
     )
