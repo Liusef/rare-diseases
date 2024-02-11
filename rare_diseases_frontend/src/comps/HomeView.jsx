@@ -12,7 +12,7 @@ const HomeView = ({ ctx }) => {
     const {page, setPage, results, setResults, selected, setSelected} = useContext(StateContext)
 
     useEffect(() => {
-        fetch('/api')
+        fetch('/api/get_keywords?q=adhd')
         .then((resp) => console.log(resp))
         .catch((err) => console.log(err))
         .finally(() => console.log('loaded'));
