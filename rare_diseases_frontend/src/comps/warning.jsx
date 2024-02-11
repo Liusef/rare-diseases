@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import Button from '../lib/Button.jsx';
+import Button from '../common/Button.jsx';
 import "../style.css"
 
 function Warning() {

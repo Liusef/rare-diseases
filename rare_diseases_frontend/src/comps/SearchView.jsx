@@ -11,7 +11,7 @@ const SearchView = () => {
 
     return (
         <div className="text-center m-4">
-            <ThemeInput/>
+            <ThemeInput />
         </div>
     )
 }

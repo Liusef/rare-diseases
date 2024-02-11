@@ -1,4 +1,4 @@
-import Button from "../lib/Button"
+import Button from "../common/Button"
 import styled from "styled-components"
 import {useContext, useEffect} from "react";
 import { StateContext } from "../App"

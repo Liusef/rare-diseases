@@ -1,6 +1,6 @@
 import { useState, useContext, createContext } from 'react'
 import Warning from './comps/warning.jsx'
-import Starter from './lib/starter.jsx'
+import Starter from './common/starter.jsx'
 import ViewManager from './comps/ViewManager.jsx'
 import "./style.css"
 import styled from 'styled-components'
