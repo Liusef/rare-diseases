@@ -9,7 +9,7 @@ import numpy as np
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/": {"origins": "*"}}, supports_credentials=True)
 
 load_dotenv(override=True)
 
@@ -17,7 +17,7 @@ app = Flask(__name__)
 embedder = EmbedDiseaseSymptoms()
 
 
-@app.route("/get_keywords", methods=['GET'])
+@app.route("/api/get_keywords", methods=['GET'])
 def get_keywords():
     connection = get_connection()
     result = {}
@@ -37,7 +37,7 @@ def get_keywords():
     
     return result
 
-@app.route("/get_possible_keywords", methods=['GET'])
+@app.route("/api/get_possible_keywords", methods=['GET'])
 def get_possible_keywords():
     connection = get_connection()
     result = {}
@@ -55,7 +55,7 @@ def get_possible_keywords():
     
     return result
 
-@app.route("/get_disease_results", methods=['GET'])
+@app.route("/api/get_disease_results", methods=['GET'])
 def get_disease_results():
     connection = get_connection()
     
