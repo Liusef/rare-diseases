@@ -28,7 +28,7 @@ def get_keywords():
         return result
     
     print(query)
-    exact_keywords = get_exact_keywords(connection, query)
+    exact_keywords = get_exact_keywords(connection, query.casefold())
     if not exact_keywords:
         return result 
     
@@ -47,7 +47,7 @@ def get_possible_keywords():
     if not query:
         return result
     
-    keywords = get_keywords_fuzzy(connection, query)
+    keywords = get_keywords_fuzzy(connection, query.casefold())
     if not keywords:
         return result
     keywords = [k[0] for k in keywords]
