@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useContext, createContext } from 'react'
+import Warning from './comps/warning.jsx'
+import Starter from './lib/starter.jsx'
+import ViewManager from './comps/ViewManager.jsx'
+import "./style.css"
+import styled from 'styled-components'
+
+export const StateContext = createContext()
+
+const LeftDiv = styled.div.attrs({
+    className: 'col-5 vh-100 border border-2 border-black'
+})`
+    background: #fff;
+    box-sizing: border-box;  
+`;
 
 function App() {
-  const [count, setCount] = useState(0)
+    // const [modalShow, setModalShow] = useState(true);
+    const [page, setPage] = useState(0);
+    const [state, setState] = useState({});
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    console.log(page)
+    console.log(state)
+
+    return (
+        <StateContext.Provider value={{page: page, setPage: setPage, state: state, setState: setState}}>
+            <Warning />
+            <div style={{width: "100vw"}}>
+                <div className='row gx-0'>
+                    <LeftDiv>
+                        <ViewManager/>
+                    </LeftDiv>
+                    <div className='col-7 vh-100' style={{background: "#225599"}}>
+                        urmom
+                    </div>
+                </div>
+            </div>
+        </StateContext.Provider>
+    )
 }
 
 export default App
